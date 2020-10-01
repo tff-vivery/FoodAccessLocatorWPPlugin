@@ -6,8 +6,8 @@
   "homepage": "https://github.com/SoWaky/FoodAccessLocatorWPPlugin",
   "requires": "4.5",
   "tested": "5.4",
-  "last_updated": "2020-10-01 12:00:00",
-  "upgrade_notice": "",
+  "last_updated": "2020-10-01 14:51:00",
+  "upgrade_notice": "Time to upgrade!",
 
   "author": "WEBIT Services, Inc.",
   "author_homepage": "http://www.webitservices.com/",
@@ -15,8 +15,7 @@
   "sections": {
     "description": "(Required) WordPress plugin for embedding the Food Access Locator application into a food bank's WordPress website. NOTE: A security token is required to activate this plugin.",
     "installation": "(Recommended) Download the Food Access Locator plugin installation zip file: https://github.com/SoWaky/FoodAccessLocatorWPPlugin/blob/main/release/food-access-locator.zip <br/><br/>Use the 'Upload Plugin' option to upload the installation zip file to the WordPress site.  After the plugin is uploaded, installed and activated, a 'Food Access Locator' item will show up in left sidebar menu on the Admin screen. In that Food Access Locator settings screen, enter the 'Region Access Token' acquired from Thierer Family Foundation. Add the [food_access_locator] shortcode on any page in the WordPress site to embed the Food Access Locator application. ",
-    "changelog": "(Recommended) Changelog. <p>This section will be displayed by default when the user clicks 'View version x.y.z details'.</p>",
-    "custom_section": "This is a custom section labeled 'Custom Section'."
+    "changelog": "(Recommended) Changelog. "
   },
 
   "icons": {
