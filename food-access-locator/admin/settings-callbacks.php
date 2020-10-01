@@ -9,7 +9,7 @@ function food_access_locator_callback_validate_options($input) {
 }
 
 function food_access_locator_callback_section_security() {
-    echo '<p>Your organization must be registered in order to use this plugin.  After registration, you will receive information to fill in these settings</p>';
+    echo '<p>Your organization must be registered with Thierer Family Foundation in order to use this plugin.  After registration, you will receive information to fill in these settings</p>';
 }
 
 function food_access_locator_callback_section_map() {
