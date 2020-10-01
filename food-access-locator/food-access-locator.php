@@ -31,3 +31,13 @@ function food_access_locator_options_default () {
         'region_token' => ''
     );
 }
+
+
+// Logic for Plugin Updater
+require_once plugin_dir_path( __FILE__ ) . 'plugin-update-checker/plugin-update-checker.php';
+
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/SoWaky/FoodAccessLocatorWPPlugin/blob/main/release/pluginupdater.json',
+	__FILE__, //Full path to the main plugin file or functions.php.
+	'food_access_locator'
+);
