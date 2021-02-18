@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Food_Access_Locator
- * @version 1.0.1
+ * @version 1.0.2
  */
 /*
 Plugin name: Food Access Locator
 Plugin URI: https://github.com/SoWaky/FoodAccessLocatorWPPlugin
 Description: This plugin allows users to access the Food Access Locator map functionality for searching for Food Access Locations
 Author: WEBIT Services
-Version: 1.0.1
+Version: 1.0.2
 Author URI: https://www.webitservices.com/
 */
 
@@ -29,6 +29,8 @@ require_once plugin_dir_path( __FILE__ ) . 'public/shortcode.php';
 function food_access_locator_options_default () {
     return array(
         'region_token' => ''
+        , 'default_radius_filter' => '10'
+        , 'show_google_translate' => 'true'
     );
 }
 
@@ -37,7 +39,7 @@ function food_access_locator_options_default () {
 require_once plugin_dir_path( __FILE__ ) . 'plugin-update-checker/plugin-update-checker.php';
 
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/SoWaky/FoodAccessLocatorWPPlugin/blob/main/release/pluginupdater.json',
+	'https://foodaccesslrs.blob.core.windows.net/wp-plugin/wppluginupdater.json',
 	__FILE__, //Full path to the main plugin file or functions.php.
 	'food-access-locator'
 );

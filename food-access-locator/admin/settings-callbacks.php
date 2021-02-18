@@ -30,3 +30,30 @@ function food_access_locator_callback_text_field( $args ) {
     type="text" style="width: ' . $width . ';" value="' . $value . '"><br/>';
     echo '<label for="food_access_locator_options_' . $id . '">' . $label . '</label>';
 }
+
+function food_access_locator_callback_dropdown_field( $args ) {
+    $options = get_option( 'food_access_locator_options', food_access_locator_options_default() );
+
+    $id = isset( $args['id'] ) ? $args['id'] : '';
+    $label = isset( $args['label'] ) ? $args['label'] : '';
+    $width = isset( $args['width'] ) ? $args['width'] : '200px';
+
+    $value = isset( $options[$id] ) ? sanitize_text_field( $options[$id] ) : '';
+
+    echo '<input id="food_access_locator_options_' . $id . '" name="food_access_locator_options[' . $id . ']" 
+    type="text" style="width: ' . $width . ';" value="' . $value . '"><br/>';
+    echo '<label for="food_access_locator_options_' . $id . '">' . $label . '</label>';
+}
+
+function food_access_locator_callback_checkbox_field( $args ) {
+    $options = get_option( 'food_access_locator_options', food_access_locator_options_default() );
+
+    $id = isset( $args['id'] ) ? $args['id'] : '';
+    $label = isset( $args['label'] ) ? $args['label'] : '';
+
+    $value = isset( $options[$id] ) ? sanitize_text_field( $options[$id] ) : '';
+
+    echo '<input id="food_access_locator_options_' . $id . '" name="food_access_locator_options[' . $id . ']" 
+    type="checkbox" value="checked" checked="' . $value . '"><br/>';
+    echo '<label for="food_access_locator_options_' . $id . '">' . $label . '</label>';
+}
