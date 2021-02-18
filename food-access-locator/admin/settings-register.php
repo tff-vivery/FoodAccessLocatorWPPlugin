@@ -51,11 +51,12 @@ function food_access_locator_register_settings() {
     add_settings_field( 
         'show_google_translate', // ID
         'Show Google Translate', // Title
-        'food_access_locator_callback_checkbox_field',   // Callback
+        'food_access_locator_callback_google_translate',   // Callback
         'food_access_locator',   // Page
         'food_access_locator_section_map',  // Section
         [ 'id' => 'show_google_translate'
-            , 'label' => ''
+            , 'label_for' => 'show_google_translate'
+            , 'custom_data' => 'custom'
              ]
     );
 }
