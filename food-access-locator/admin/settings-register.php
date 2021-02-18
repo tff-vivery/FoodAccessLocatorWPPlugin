@@ -49,17 +49,6 @@ function food_access_locator_register_settings() {
     );
 
     add_settings_field( 
-        'googletranslatetest', // ID
-        'Test translate setting', // Title
-        'food_access_locator_callback_text_field',   // Callback
-        'food_access_locator',   // Page
-        'food_access_locator_section_map',  // Section
-        [ 'id' => 'googletranslatetest'
-            , 'label' => ''
-            , 'width' => '50px' ]
-    );
-
-    add_settings_field( 
         'show_google_translate', // ID
         'Show Google Translate', // Title
         'food_access_locator_callback_checkbox_field',   // Callback

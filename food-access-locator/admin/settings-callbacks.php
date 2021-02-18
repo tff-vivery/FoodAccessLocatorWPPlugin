@@ -26,7 +26,7 @@ function food_access_locator_callback_text_field( $args ) {
 
     $value = isset( $options[$id] ) ? sanitize_text_field( $options[$id] ) : '';
 
-    echo '<input id="food_access_locator_options_' . $id . '" name="food_access_locator_options[' . $id . ']" 
+    echo '<input id="food_access_locator_options_' . $id . '" name="food_access_locator_options' . $id . '" 
     type="text" style="width: ' . $width . ';" value="' . $value . '"><br/>';
     echo '<label for="food_access_locator_options_' . $id . '">' . $label . '</label>';
 }
@@ -53,7 +53,7 @@ function food_access_locator_callback_checkbox_field( $args ) {
 
     $value = isset( $options[$id] ) ? sanitize_text_field( $options[$id] ) : '';
 
-    echo '<input id="food_access_locator_options_' . $id . '" name="food_access_locator_options[' . $id . ']" 
+    echo '<input id="food_access_locator_options_' . $id . '" name="food_access_locator_options' . $id . '" 
     type="checkbox" value="checked" checked="' . $value . '"><br/>';
     echo '<label for="food_access_locator_options_' . $id . '">' . $label . '</label>';
 }
