@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function food_access_locator_shortcode() {
-    $BaseUrl = get_option("food_access_locator_options")['region_token'] == "Production" ? 'https://food-access.azurewebsites.net/' : 'https://food-access-staging.azurewebsites.net/';
+    $BaseUrl = get_option("food_access_locator_options")['environment'] == "Production" ? 'https://food-access.azurewebsites.net/' : 'https://food-access-staging.azurewebsites.net/';
 
     return
         '<iframe id="FoodAccessFrame" src="' . $BaseUrl
