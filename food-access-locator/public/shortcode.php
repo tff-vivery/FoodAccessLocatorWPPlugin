@@ -15,6 +15,7 @@ function food_access_locator_shortcode() {
 
     return
         '<iframe id="FoodAccessFrame" src="' . $BaseUrl
+        . '#googtrans(en|' . urlencode(get_option("food_access_locator_options")['default_page_language']) . ')'
         . '?RegionToken=' . urlencode(get_option("food_access_locator_options")['region_token']) 
         . '&DefaultRadius=' . urlencode(get_option("food_access_locator_options")["default_radius_filter"])
         . '&ShowGoogleTranslate=' . urlencode(get_option("food_access_locator_options")["show_google_translate"])

@@ -71,6 +71,18 @@ function food_access_locator_register_settings() {
             , 'custom_data' => 'custom'
              ]
     );
+
+    add_settings_field( 
+        'default_page_language', // ID
+        'Default Page Language', // Title
+        'food_access_locator_callback_default_page_language',   // Callback
+        'food_access_locator',   // Page
+        'food_access_locator_section_map',  // Section
+        [ 'id' => 'default_page_language'
+            , 'label_for' => 'default_page_language'
+            , 'custom_data' => 'custom'
+             ]
+    );
 }
 
 add_action( 'admin_init', 'food_access_locator_register_settings' );
