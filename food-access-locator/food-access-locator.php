@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Food_Access_Locator
- * @version 1.0.2
+ * @version 1.0.9
  */
 /*
 Plugin name: Food Access Locator
