@@ -30,3 +30,39 @@ function food_access_locator_callback_text_field( $args ) {
     type="text" style="width: ' . $width . ';" value="' . $value . '"><br/>';
     echo '<label for="food_access_locator_options_' . $id . '">' . $label . '</label>';
 }
+
+function food_access_locator_callback_google_translate( $args ) {
+    // Get the value of the setting we've registered with register_setting()
+    $options = get_option( 'food_access_locator_options', food_access_locator_options_default() );
+    ?>
+    <select
+            id="<?php echo esc_attr( $args['label_for'] ); ?>"
+            data-custom="<?php echo esc_attr( $args['custom_data'] ); ?>"
+            name="food_access_locator_options[<?php echo esc_attr( $args['label_for'] ); ?>]">
+        <option value="Yes" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Yes', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'Yes' ); ?>
+        </option>
+        <option value="No" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'No', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'No' ); ?>
+        </option>
+    </select>
+    <?php
+}
+
+function food_access_locator_callback_environment( $args ) {
+    // Get the value of the setting we've registered with register_setting()
+    $options = get_option( 'food_access_locator_options', food_access_locator_options_default() );
+    ?>
+    <select
+            id="<?php echo esc_attr( $args['label_for'] ); ?>"
+            data-custom="<?php echo esc_attr( $args['custom_data'] ); ?>"
+            name="food_access_locator_options[<?php echo esc_attr( $args['label_for'] ); ?>]">
+        <option value="Production" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Production', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'Production' ); ?>
+        </option>
+        <option value="Test" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Test', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'Test' ); ?>
+        </option>
+    </select>
+    <?php
+}

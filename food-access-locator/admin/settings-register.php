@@ -38,6 +38,18 @@ function food_access_locator_register_settings() {
     );
 
     add_settings_field( 
+        'environment', // ID
+        'Food Access Environment', // Title
+        'food_access_locator_callback_environment',   // Callback
+        'food_access_locator',   // Page
+        'food_access_locator_section_map',  // Section
+        [ 'id' => 'environment'
+            , 'label_for' => 'environment'
+            , 'custom_data' => 'custom'
+             ]
+    );
+
+    add_settings_field( 
         'default_radius_filter', // ID
         'Default Radius Filter - Number of Miles', // Title
         'food_access_locator_callback_text_field',   // Callback
@@ -47,5 +59,18 @@ function food_access_locator_register_settings() {
             , 'label' => ''
             , 'width' => '50px' ]
     );
+
+    add_settings_field( 
+        'show_google_translate', // ID
+        'Show Google Translate', // Title
+        'food_access_locator_callback_google_translate',   // Callback
+        'food_access_locator',   // Page
+        'food_access_locator_section_map',  // Section
+        [ 'id' => 'show_google_translate'
+            , 'label_for' => 'show_google_translate'
+            , 'custom_data' => 'custom'
+             ]
+    );
 }
+
 add_action( 'admin_init', 'food_access_locator_register_settings' );

@@ -3,8 +3,9 @@
     "",
     "\\food-access-locator",
     "\\food-access-locator\\admin",
-    "\\food-access-locator\\includes",
+    "\\food-access-locator\\public",
     "\\release"
   ],
+  "SelectedNode": "\\release\\wppluginupdater.json",
   "PreviewInSolutionExplorer": false
 }
