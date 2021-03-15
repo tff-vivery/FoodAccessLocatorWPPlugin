@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Food_Access_Locator
- * @version 1.0.10
+ * @version 1.0.11
  */
 /*
 Plugin name: Food Access Locator
 Plugin URI: https://github.com/SoWaky/FoodAccessLocatorWPPlugin
 Description: This plugin allows users to access the Food Access Locator map functionality for searching for Food Access Locations
 Author: WEBIT Services
-Version: 1.0.10
+Version: 1.0.11
 Author URI: https://www.webitservices.com/
 */
 
