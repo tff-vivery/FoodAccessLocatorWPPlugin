@@ -18,6 +18,7 @@ function food_access_locator_shortcode() {
         . '?RegionToken=' . urlencode(get_option("food_access_locator_options")['region_token']) 
         . '&DefaultRadius=' . urlencode(get_option("food_access_locator_options")["default_radius_filter"])
         . '&ShowGoogleTranslate=' . urlencode(get_option("food_access_locator_options")["show_google_translate"])
+        . '&GoogleTranslateLanguage=#googtrans(en|' . urlencode(get_option("food_access_locator_options")['default_page_language']) . ')'
         . '" style="width: 100%; height: 800px;" allow="geolocation">' . $environmentsetting
         . '</iframe>';
 }
