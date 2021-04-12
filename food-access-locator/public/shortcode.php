@@ -20,7 +20,7 @@ function food_access_locator_shortcode() {
         . '&DefaultRadius=' . urlencode(get_option("food_access_locator_options")["default_radius_filter"])
         . '&ShowGoogleTranslate=' . urlencode(get_option("food_access_locator_options")["show_google_translate"])
         . '&GoogleTranslateLanguage=' . $translateLanguage . '#googtrans(en|' . $translateLanguage . ')'
-        . '" style="width: 100%; height: 800px;" allow="geolocation">' . $environmentsetting
+        . '" style="overflow:hidden; overflow-x:hidden; overflow-y:hidden; height:800px; width:100%; position:relative; top:0px; left:0px; right:0px; bottom:0px; border:0;" allow="geolocation">' . $environmentsetting
         . '</iframe>';
 }
 add_shortcode( 'food_access_locator', 'food_access_locator_shortcode' );
