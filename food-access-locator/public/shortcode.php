@@ -8,14 +8,15 @@ function food_access_locator_shortcode() {
     $environmentsetting = trim(strtoupper(get_option("food_access_locator_options")['environment']));
 
     if ($environmentsetting == "PRODUCTION") {
-        $BaseUrl = 'https://food-access.azurewebsites.net/';
+        $BaseUrl = 'https://client.foodaccessportal.org/';
     } else {
-        $BaseUrl = 'https://food-access-staging.azurewebsites.net/';
+        $BaseUrl = 'https://client-staging.foodaccessportal.org/';
     }
     $translateLanguage = trim(strtolower(get_option("food_access_locator_options")['default_page_language']));
 
     return
-        '<iframe id="FoodAccessFrame" src="' . $BaseUrl
+        '<!-- Plugin Version: 1.0.14 -->'
+        . '<iframe id="FoodAccessFrame" src="' . $BaseUrl
         . '?RegionToken=' . urlencode(get_option("food_access_locator_options")['region_token']) 
         . '&DefaultRadius=' . urlencode(get_option("food_access_locator_options")["default_radius_filter"])
         . '&ShowGoogleTranslate=' . urlencode(get_option("food_access_locator_options")["show_google_translate"])
