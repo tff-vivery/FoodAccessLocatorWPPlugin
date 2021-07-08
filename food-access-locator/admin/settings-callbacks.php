@@ -31,47 +31,7 @@ function food_access_locator_callback_text_field( $args ) {
     echo '<label for="food_access_locator_options_' . $id . '">' . $label . '</label>';
 }
 
-function food_access_locator_callback_google_translate( $args ) {
-    // Get the value of the setting we've registered with register_setting()
-    $options = get_option( 'food_access_locator_options', food_access_locator_options_default() );
-    ?>
-    <select
-            id="<?php echo esc_attr( $args['label_for'] ); ?>"
-            data-custom="<?php echo esc_attr( $args['custom_data'] ); ?>"
-            name="food_access_locator_options[<?php echo esc_attr( $args['label_for'] ); ?>]">
-        <option value="Yes" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Yes', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'Yes' ); ?>
-        </option>
-        <option value="No" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'No', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'No' ); ?>
-        </option>
-    </select>
-    <?php
-}
 
-function food_access_locator_callback_default_page_language( $args ) {
-    // Get the value of the setting we've registered with register_setting()
-    $options = get_option( 'food_access_locator_options', food_access_locator_options_default() );
-    ?>
-    <select
-            id="<?php echo esc_attr( $args['label_for'] ); ?>"
-            data-custom="<?php echo esc_attr( $args['custom_data'] ); ?>"
-            name="food_access_locator_options[<?php echo esc_attr( $args['label_for'] ); ?>]">
-        <option value="en" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'en', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'English' ); ?>
-        </option>
-        <option value="es" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'es', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'Spanish' ); ?>
-        </option>
-        <option value="ru" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'ru', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'Russian' ); ?>
-        </option>
-        <option value="pl" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'pl', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'Polish' ); ?>
-        </option>
-    </select>
-    <?php
-}
 
 
 function food_access_locator_callback_environment( $args ) {
@@ -87,6 +47,9 @@ function food_access_locator_callback_environment( $args ) {
         </option>
         <option value="Test" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Test', false ) ) : ( '' ); ?>>
             <?php esc_html_e( 'Test' ); ?>
+        </option>
+         <option value="MultiNetwork" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'MultiNetwork', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'MultiNetwork' ); ?>
         </option>
     </select>
     <?php

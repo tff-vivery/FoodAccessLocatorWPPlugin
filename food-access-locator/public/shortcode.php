@@ -9,18 +9,19 @@ function food_access_locator_shortcode() {
 
     if ($environmentsetting == "PRODUCTION") {
         $BaseUrl = 'https://client.foodaccessportal.org/';
-    } else {
+    } 
+    elseif ($environmentsetting == "MULTINETWORK") {
+        $BaseUrl = 'https://food-access-multinetwork.azurewebsites.net/';
+    }
+    else {
         $BaseUrl = 'https://client-staging.foodaccessportal.org/';
     }
-    $translateLanguage = trim(strtolower(get_option("food_access_locator_options")['default_page_language']));
+
 
     return
-        '<!-- Plugin Version: 1.0.14 -->'
+        '<!-- Plugin Version: 2.0.0 -->'
         . '<iframe id="FoodAccessFrame" src="' . $BaseUrl
         . '?RegionToken=' . urlencode(get_option("food_access_locator_options")['region_token']) 
-        . '&DefaultRadius=' . urlencode(get_option("food_access_locator_options")["default_radius_filter"])
-        . '&ShowGoogleTranslate=' . urlencode(get_option("food_access_locator_options")["show_google_translate"])
-        . '&GoogleTranslateLanguage=' . $translateLanguage . '#googtrans(en|' . $translateLanguage . ')'
         . '" style="overflow:hidden; overflow-x:hidden; overflow-y:hidden; height:800px; width:100%; position:relative; top:0px; left:0px; right:0px; bottom:0px; border:0;" allow="geolocation">' . $environmentsetting
         . '</iframe>';
 }

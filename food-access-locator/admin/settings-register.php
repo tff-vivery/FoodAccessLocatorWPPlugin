@@ -49,40 +49,6 @@ function food_access_locator_register_settings() {
              ]
     );
 
-    add_settings_field( 
-        'default_radius_filter', // ID
-        'Default Radius Filter - Number of Miles', // Title
-        'food_access_locator_callback_text_field',   // Callback
-        'food_access_locator',   // Page
-        'food_access_locator_section_map',  // Section
-        [ 'id' => 'default_radius_filter'
-            , 'label' => ''
-            , 'width' => '50px' ]
-    );
-
-    add_settings_field( 
-        'show_google_translate', // ID
-        'Show Google Translate', // Title
-        'food_access_locator_callback_google_translate',   // Callback
-        'food_access_locator',   // Page
-        'food_access_locator_section_map',  // Section
-        [ 'id' => 'show_google_translate'
-            , 'label_for' => 'show_google_translate'
-            , 'custom_data' => 'custom'
-             ]
-    );
-
-    add_settings_field( 
-        'default_page_language', // ID
-        'Default Page Language', // Title
-        'food_access_locator_callback_default_page_language',   // Callback
-        'food_access_locator',   // Page
-        'food_access_locator_section_map',  // Section
-        [ 'id' => 'default_page_language'
-            , 'label_for' => 'default_page_language'
-            , 'custom_data' => 'custom'
-             ]
-    );
 }
 
 add_action( 'admin_init', 'food_access_locator_register_settings' );
