@@ -11,15 +11,15 @@ function food_access_locator_shortcode() {
         $BaseUrl = 'https://client.foodaccessportal.org/';
     } 
     elseif ($environmentsetting == "MULTINETWORK") {
-        $BaseUrl = 'https://food-access-multinetwork.azurewebsites.net/';
+        $BaseUrl = 'https://accessfood.org/';
     }
     else {
-        $BaseUrl = 'https://client-staging.foodaccessportal.org/';
+        $BaseUrl = 'https://staging.accessfood.org/';
     }
 
 
     return
-        '<!-- Plugin Version: 2.0.0 -->'
+        '<!-- Plugin Version: 2.0.1 -->'
         . '<iframe id="FoodAccessFrame" src="' . $BaseUrl
         . '?RegionToken=' . urlencode(get_option("food_access_locator_options")['region_token']) 
         . '" style="overflow:hidden; overflow-x:hidden; overflow-y:hidden; height:800px; width:100%; position:relative; top:0px; left:0px; right:0px; bottom:0px; border:0;" allow="geolocation">' . $environmentsetting
