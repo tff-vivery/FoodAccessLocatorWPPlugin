@@ -13,13 +13,16 @@ function food_access_locator_shortcode() {
     elseif ($environmentsetting == "MULTINETWORK") {
         $BaseUrl = 'https://accessfood.org/';
     }
+    elseif ($environmentsetting == "OPTIMUS") {
+        $BaseUrl = 'https://optimus.accessfood.org/';
+    }
     else {
         $BaseUrl = 'https://staging.accessfood.org/';
     }
 
 
     return
-        '<!-- Plugin Version: 2.0.1 -->'
+        '<!-- Plugin Version: 3.0.0 -->'
         . '<iframe id="FoodAccessFrame" src="' . $BaseUrl
         . '?RegionToken=' . urlencode(get_option("food_access_locator_options")['region_token']) 
         . '" style="overflow:hidden; overflow-x:hidden; overflow-y:hidden; height:800px; width:100%; position:relative; top:0px; left:0px; right:0px; bottom:0px; border:0;" allow="geolocation">' . $environmentsetting

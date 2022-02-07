@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\food-access-locator",
-    "\\food-access-locator\\admin",
-    "\\food-access-locator\\public"
+    "\\food-access-locator"
   ],
-  "SelectedNode": "\\food-access-locator\\food-access-locator.php",
   "PreviewInSolutionExplorer": false
 }
