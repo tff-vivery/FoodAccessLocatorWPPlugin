@@ -45,11 +45,8 @@ function food_access_locator_callback_environment( $args ) {
         <option value="Production" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Production', false ) ) : ( '' ); ?>>
             <?php esc_html_e( 'Production' ); ?>
         </option>
-        <option value="Test" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Test', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'Test' ); ?>
-        </option>
-         <option value="MultiNetwork" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'MultiNetwork', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'MultiNetwork' ); ?>
+         <option value="Staging" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Staging', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'Staging' ); ?>
         </option>
         <option value="OptimusProduction" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'OptimusProduction', false ) ) : ( '' ); ?>>
             <?php esc_html_e( 'Optimus Production' ); ?>

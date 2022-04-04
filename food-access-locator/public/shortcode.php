@@ -5,30 +5,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function food_access_locator_shortcode() {
-    $environmentsetting = trim(strtoupper(get_option("food_access_locator_options")['environment']));
+    $environmentsetting = trim(get_option("food_access_locator_options")['environment']);
 
-    if ($environmentsetting == "PRODUCTION") {
-        $BaseUrl = 'https://client.foodaccessportal.org/';
+    if ($environmentsetting == "Production") {
+        $CDNUrl = 'https://food-access-widget-cdn.azureedge.net/accessfood-widget/';
     } 
-    elseif ($environmentsetting == "MULTINETWORK") {
-        $BaseUrl = 'https://accessfood.org/';
+    elseif ($environmentsetting == "Staging") {
+        $CDNUrl = 'https://food-access-widget-cdn.azureedge.net/accessfood-widget-staging/';
     }
-    elseif ($environmentsetting == "OPTIMUSPRODUCTION") {
-        $BaseUrl = 'https://optimus.accessfood.org/';
+    elseif ($environmentsetting == "OptimusProduction") {
+        $CDNUrl ='https://food-access-widget-cdn.azureedge.net/accessfood-widget/';
     }
-    elseif ($environmentsetting == "OPTIMUSSTAGING") {
-        $BaseUrl = 'https://optimus-staging.accessfood.org/';
+    else ($environmentsetting == "OptimusStaging") {
+        $CDNUrl = 'https://food-access-widget-cdn.azureedge.net/accessfood-widget-staging/';
     }
-    else {
-        $BaseUrl = 'https://staging.accessfood.org/';
-    }
+
 
 
     return
-        '<!-- Plugin Version: 3.0.1 -->'
-        . '<iframe id="FoodAccessFrame" src="' . $BaseUrl
-        . '?RegionToken=' . urlencode(get_option("food_access_locator_options")['region_token']) 
-        . '" style="overflow:hidden; overflow-x:hidden; overflow-y:hidden; height:800px; width:100%; position:relative; top:0px; left:0px; right:0px; bottom:0px; border:0;" allow="geolocation">' . $environmentsetting
-        . '</iframe>';
+        '<!-- Plugin Version: 3.0.2 -->'
+        . '<div class="accessfood-widget" data-map="'
+        . urlencode(get_option("food_access_locator_options")['region_token'])
+        .'" data-environment="'
+        . $environmentsetting
+        . '" style="max-width: 100% !important"></div>'
+        . '<link href="'
+        . $CDNUrl
+        . 'index.css" rel="stylesheet"></link>'
+        . '<script src="'
+        . $CDNUrl 
+        . 'index.js"></script>';
 }
 add_shortcode( 'food_access_locator', 'food_access_locator_shortcode' );
