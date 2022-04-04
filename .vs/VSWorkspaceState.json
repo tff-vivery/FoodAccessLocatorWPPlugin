@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\food-access-locator"
+    "\\food-access-locator",
+    "\\release"
   ],
+  "SelectedNode": "\\release\\food-access-locator-v3.0.0.zip",
   "PreviewInSolutionExplorer": false
 }
