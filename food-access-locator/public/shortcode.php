@@ -14,19 +14,19 @@ function food_access_locator_shortcode() {
         $CDNUrl = 'https://food-access-widget-cdn.azureedge.net/accessfood-widget-staging/';
     }
     elseif ($environmentsetting == "OptimusProduction") {
-        $CDNUrl ='https://food-access-widget-cdn.azureedge.net/accessfood-widget/';
+        $CDNUrl ='https://food-access-widget-cdn.azureedge.net/accessfood-widget-optimus/';
     }
-    else ($environmentsetting == "OptimusStaging") {
-        $CDNUrl = 'https://food-access-widget-cdn.azureedge.net/accessfood-widget-staging/';
+    elseif ($environmentsetting == "OptimusStaging") {
+        $CDNUrl = 'https://food-access-widget-cdn.azureedge.net/accessfood-widget-optimus-staging/';
     }
 
 
 
     return
-        '<!-- Plugin Version: 3.0.2 -->'
+        '<!-- Plugin Version: 3.0.3 -->'
         . '<div class="accessfood-widget" data-map="'
         . urlencode(get_option("food_access_locator_options")['region_token'])
-        .'" data-environment="'
+        . '" data-environment="'
         . $environmentsetting
         . '" style="max-width: 100% !important"></div>'
         . '<link href="'
