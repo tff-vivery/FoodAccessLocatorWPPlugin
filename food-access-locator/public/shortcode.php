@@ -13,14 +13,16 @@ function food_access_locator_shortcode() {
     elseif ($environmentsetting == "Staging") {
         $CDNUrl = 'https://food-access-widget-cdn.azureedge.net/accessfood-widget-staging/';
     }
+    elseif ($environmentsetting == "Demo") {
+        $CDNUrl = 'https://food-access-widget-cdn.azureedge.net/accessfood-widget-demo/';
+    }
     elseif ($environmentsetting == "OptimusProduction") {
         $CDNUrl ='https://food-access-widget-cdn.azureedge.net/accessfood-widget-optimus/';
     }
     elseif ($environmentsetting == "OptimusStaging") {
         $CDNUrl = 'https://food-access-widget-cdn.azureedge.net/accessfood-widget-optimus-staging/';
     }
-
-
+   
 
     return
         '<!-- Plugin Version: 3.0.3 -->'
