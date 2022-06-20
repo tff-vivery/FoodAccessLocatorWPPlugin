@@ -42,14 +42,17 @@ function food_access_locator_callback_environment( $args ) {
             id="<?php echo esc_attr( $args['label_for'] ); ?>"
             data-custom="<?php echo esc_attr( $args['custom_data'] ); ?>"
             name="food_access_locator_options[<?php echo esc_attr( $args['label_for'] ); ?>]">
-        <option value="Production" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Production', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'Production' ); ?>
+        <option value="GCFDProduction" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'GCFDProduction', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'GCFD Production' ); ?>
         </option>
-        <option value="Test" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Test', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'Test' ); ?>
+        <option value="Demo" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'Demo', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'Demo' ); ?>
         </option>
-         <option value="MultiNetwork" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'MultiNetwork', false ) ) : ( '' ); ?>>
-            <?php esc_html_e( 'MultiNetwork' ); ?>
+         <option value="MainProduction" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'MainProduction', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'Main Production' ); ?>
+        </option>
+         <option value="MainStaging" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'MainStaging', false ) ) : ( '' ); ?>>
+            <?php esc_html_e( 'Main Staging' ); ?>
         </option>
         <option value="OptimusProduction" <?php echo isset( $options[ $args['label_for'] ] ) ? ( selected( $options[ $args['label_for'] ], 'OptimusProduction', false ) ) : ( '' ); ?>>
             <?php esc_html_e( 'Optimus Production' ); ?>

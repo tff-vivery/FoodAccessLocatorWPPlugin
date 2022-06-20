@@ -7,11 +7,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 function food_access_locator_shortcode() {
     $environmentsetting = trim(strtoupper(get_option("food_access_locator_options")['environment']));
 
-    if ($environmentsetting == "PRODUCTION") {
+    if ($environmentsetting == "GCFDPRODUCTION") {
         $BaseUrl = 'https://client.foodaccessportal.org/';
     } 
-    elseif ($environmentsetting == "MULTINETWORK") {
+    elseif ($environmentsetting == "MAINPRODUCTION") {
         $BaseUrl = 'https://accessfood.org/';
+    }
+    elseif ($environmentsetting == "MAINSTAGING") {
+        $BaseUrl = 'https://staging.accessfood.org/';
+    }
+    elseif ($environmentsetting == "DEMO") {
+        $BaseUrl = 'https://demo.accessfood.org/';
     }
     elseif ($environmentsetting == "OPTIMUSPRODUCTION") {
         $BaseUrl = 'https://optimus.accessfood.org/';
